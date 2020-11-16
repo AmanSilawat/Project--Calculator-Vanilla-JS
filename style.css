@@ -1,16 +1,26 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    /* background: #000; */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
     background-image: url(img/bg.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    padding: 0px 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+/* 
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+} */
 
 #container {
     width: 95%;
     height: 95vh;
-    margin: 20px auto;
+    /* margin: 0px auto; */
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.295);
     display: flex;
@@ -21,7 +31,7 @@ body {
 #calculator {
     width: 320px;
     height: 520px;
-    background-color: rgb(234 237 239 / 81%);
+    background-color: #eaedef;
     margin: 0 auto;
     /* top: 15px; */
     position: relative;
@@ -44,7 +54,7 @@ body {
 #output {
     text-align: right;
     height: 60px;
-    margin: 10px 20px ;
+    margin: 10px 20px;
     font-size: 30px;
 }
 
@@ -52,41 +62,55 @@ body {
     height: 400px;
 }
 
-.operator, .number, .empty{
+.operator,
+.number,
+.empty {
     width: 50px;
     height: 50px;
     margin: 15px;
     float: left;
     border-radius: 50%;
     border-width: 0px;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 15px;
-    background-color: #c9c7ca;
+    background-color: hsl(0, 0%, 87%);
+    box-shadow: inset -2px -2px 3px 1px #00000087;
+    transition: box-shadow .1s ,transform .1s;
 }
 
-.number{
+.number {
     background-color: #ffffff;
+    font-size: 22px;
+    font-weight: 300;
 }
 
-.empty{
+.empty {
     background-color: transparent;
+    visibility: hidden;
 }
 
-.number, .operator{
+.number,
+.operator {
     cursor: pointer;
 }
 
-.number:active, .operator:active{
-    font-size: 13px;
+.number:active,
+.operator:active {
+    /* font-size: 13px; */
+    transform: scale(.95);
+    box-shadow: inset -2px -2px 3px 1px #00000036;
 }
 
-.number:focus, .operator:focus, .empty:focus{
+.number:focus,
+.operator:focus,
+.empty:focus {
     outline: none;
 }
 
 button:nth-child(4) {
     font-size: 20px;
-    background-color: #8d45a0;
+    background-color: #d18ae4;
 }
 
 button:nth-child(8) {
@@ -96,10 +120,17 @@ button:nth-child(8) {
 
 button:nth-child(12) {
     font-size: 20px;
-    background-color: #d4ec4a;
+    background-color: #93cdff;
 }
 
 button:nth-child(16) {
     font-size: 20px;
-    background-color: #e62727;
+    background-color: #ff8787;
 }
+
+/* button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16) {
+    background-color: gray;
+} */
